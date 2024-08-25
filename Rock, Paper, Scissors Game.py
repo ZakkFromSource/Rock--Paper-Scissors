@@ -3,8 +3,8 @@ import random
 valid = [1, 2, 3]
 beats = {'rock': 'scissors', 'paper': 'rock', 'scissors': 'paper'}
 moves = {1: 'rock', 2: 'paper', 3: 'scissors'}
-p1 = None
-com = None
+
+
 
 
 def validentry(p1) :
@@ -35,7 +35,7 @@ def p1_input() :
 def comp_rps():
     return random.randrange(1,4)
 
-def win_chk ():
+def win_chk (p1, com):
     p1_hand = moves[p1]
     com_hand = moves[com]
     print('Player:', p1_hand)
@@ -51,7 +51,7 @@ def win_chk ():
 p1 = p1_input()
 com = comp_rps()
 #print(p1, com)
-win_chk()
+win_chk(p1, com)
 
 
 
